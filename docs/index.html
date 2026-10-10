@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrackExpense — Smart Expense Tracker, Budgets & Bill Splitting</title>
-    <meta name="description" content="Take control of your personal finances with TrackExpense. Log daily expenses, manage multi-currency accounts, split group bills with friends, and gain visual insights.">
+    <title>TrackExpense — Smart Expense Tracker, Budgets & Bill Splitting for iOS</title>
+    <meta name="description" content="Take total control of your personal finances with TrackExpense for iOS. 4-way transaction logging, real-time multi-currency conversions, group bill splitting, visual analytics, and Face ID biometric privacy.">
     <link rel="icon" type="image/png" href="assets/logo.png">
     
     <!-- Google Fonts -->
@@ -36,9 +36,11 @@
             </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#screenshots">Screenshots</a>
-                <a href="#policy">Privacy Policy</a>
-                <a href="#terms">Terms</a>
+                <a href="#showcase">3D Preview</a>
+                <a href="#screenshots">App Screens</a>
+                <a href="#security">Security</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
                 <a href="#support">Support</a>
                 <a href="#download" class="btn-primary-small">Get the App</a>
             </div>
@@ -51,116 +53,199 @@
             <div class="hero-text">
                 <div class="badge">
                     <i data-lucide="sparkles" style="width: 15px; height: 15px; color: var(--accent-mint);"></i>
-                    <span>Smart Personal Finance</span>
+                    <span>Native iOS 17+ • Smart Personal Finance</span>
                 </div>
-                <h1>Master Your <br><span class="text-accent">Finances & Expenses</span></h1>
-                <p>Track daily spending, manage category budgets, split group bills with friends, and gain complete financial clarity—all crafted in an elegant, private dark aurora interface.</p>
+                <h1>Master Your <br><span class="text-accent">Finances & Group Bills</span></h1>
+                <p>Log transactions in 3 seconds flat, convert global currencies in real-time, split trip bills with friends, and gain complete visual clarity—all wrapped in an elegant Dark Aurora interface protected by Face ID biometric privacy.</p>
                 
                 <div class="hero-cta">
                     <a href="#download" class="btn-primary">
                         <i data-lucide="apple"></i>
                         Download for iOS
                     </a>
-                    <a href="#features" class="btn-secondary">
-                        <i data-lucide="compass"></i>
-                        Explore Features
+                    <a href="#screenshots" class="btn-secondary">
+                        <i data-lucide="layers"></i>
+                        Explore 12 Screens
                     </a>
                 </div>
 
+                <!-- Feature Pill Badges -->
+                <div class="banner-pills-row" style="margin-bottom: 2rem;">
+                    <div class="banner-pill"><i data-lucide="refresh-cw"></i> Live Multi-Currency</div>
+                    <div class="banner-pill"><i data-lucide="scan-line"></i> Vision OCR Receipts</div>
+                    <div class="banner-pill"><i data-lucide="users"></i> Trip Split Ledger</div>
+                    <div class="banner-pill"><i data-lucide="shield-check"></i> Face ID Locked</div>
+                </div>
 
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>4-Way Flow</strong>
+                        <span>Income, Expense, Get, Give</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>100% Offline</strong>
+                        <span>Instant Local Persistence</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>Zero Ads</strong>
+                        <span>Private & Unmonetized</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- 3D Interactive Phone Mockup -->
-            <div class="hero-mockup">
-                <div class="phone-frame">
-                    <div class="phone-notch"></div>
-                    <img src="assets/screenshots/ss-01-dashboard.png" alt="TrackExpense Dashboard" class="mockup-img">
+            <!-- 3D Interactive Phone Mockup with Screen Switcher Wrapper -->
+            <div class="hero-mockup-wrapper">
+                <!-- Screen Switcher Pills -->
+                <div class="hero-screen-toggle">
+                    <button class="hero-toggle-btn active" data-screen="dashboard">
+                        <i data-lucide="layout-dashboard" style="width: 15px; height: 15px;"></i>
+                        <span>Dashboard</span>
+                    </button>
+                    <button class="hero-toggle-btn" data-screen="transactions">
+                        <i data-lucide="list-ordered" style="width: 15px; height: 15px;"></i>
+                        <span>Transactions</span>
+                    </button>
                 </div>
 
-                <!-- Floating Badge 1 (Income / Multi-currency) -->
-                <div class="floating-badge badge-income">
-                    <div class="badge-icon-box">
-                        <i data-lucide="wallet" class="text-mint" style="width: 20px; height: 20px;"></i>
+                <div class="hero-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <img id="heroPhoneImg" src="assets/screenshots/ss-01-dashboard.png" alt="TrackExpense Dashboard" class="mockup-img">
                     </div>
-                    <div>
-                        <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Net Balance</div>
-                        <div style="font-size: 1rem; color: var(--accent-mint); font-weight: 700;">₹1,00,000</div>
-                    </div>
-                </div>
 
-                <!-- Floating Badge 2 (Group Expenses) -->
-                <div class="floating-badge badge-split">
-                    <div class="badge-icon-box">
-                        <i data-lucide="users" style="width: 20px; height: 20px; color: var(--primary-indigo);"></i>
+                    <!-- Floating Badge 1 (Net Balance / Cash Flow) -->
+                    <div id="heroBadgeBalance" class="floating-badge badge-income">
+                        <div class="badge-icon-box">
+                            <i data-lucide="wallet" class="text-mint" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Net Balance</div>
+                            <div style="font-size: 1rem; color: var(--accent-mint); font-weight: 700;">₹1,00,000</div>
+                        </div>
                     </div>
-                    <div>
-                        <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Group Settlement</div>
-                        <div style="font-size: 1rem; color: #FFFFFF; font-weight: 700;">Trip Split Active</div>
+
+                    <!-- Floating Badge 2 (Group Settlement) -->
+                    <div id="heroBadgeSplit" class="floating-badge badge-split">
+                        <div class="badge-icon-box">
+                            <i data-lucide="users" style="width: 20px; height: 20px; color: var(--primary-indigo);"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Group Settlement</div>
+                            <div style="font-size: 1rem; color: #FFFFFF; font-weight: 700;">Trip Split Active</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- 3D Marketing Banner Showcase Section -->
+    <section id="showcase" class="banner-showcase-section">
+        <div class="section-header">
+            <div class="badge">
+                <i data-lucide="award" style="width: 15px; height: 15px; color: var(--accent-mint);"></i>
+                <span>Designed Exclusively for Apple iOS</span>
+            </div>
+            <h2>Engineered for Clarity. <span class="text-accent">Designed to Inspire.</span></h2>
+            <p>Every pixel is crafted to give you total control over where your hard-earned money flows.</p>
+        </div>
+
+        <div class="banner-3d-card">
+            <img src="assets/hero-banner-3d.png" alt="TrackExpense 3D App Ecosystem" class="banner-3d-img">
+            <div class="banner-overlay-info">
+                <div class="banner-text-content">
+                    <h3>TrackExpense — Smart Money. Simplified.</h3>
+                    <p>Track Expenses • Plan Category Budgets • Split Group Bills • Real-Time Financial Insights</p>
+                </div>
+                <div class="banner-pills-row">
+                    <div class="banner-pill"><i data-lucide="pie-chart"></i> Budget Caps</div>
+                    <div class="banner-pill"><i data-lucide="coins"></i> Multi-Currency</div>
+                    <div class="banner-pill"><i data-lucide="users-2"></i> Bill Split</div>
+                    <div class="banner-pill"><i data-lucide="file-text"></i> PDF Statements</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
     <section id="features" class="features">
         <div class="section-header">
-            <h2>Smart <span class="text-accent">Features</span></h2>
-            <p>Everything you need for comprehensive personal budgeting and stress-free group expense splitting.</p>
+            <h2>Smart Financial <span class="text-accent">Features</span></h2>
+            <p>Everything you need for comprehensive personal budgeting, multi-currency travels, and stress-free group expense splitting.</p>
         </div>
         
         <div class="features-grid">
-            <!-- Feature 1 -->
+            <!-- Feature 1: Multi-Currency -->
             <div class="feature-card">
                 <div class="feature-icon-wrapper">
-                    <i data-lucide="wallet" class="feature-icon"></i>
+                    <i data-lucide="dollar-sign" class="feature-icon"></i>
                 </div>
                 <h3>Multi-Currency Tracking</h3>
-                <p>Seamlessly hold accounts and log expenses in USD, EUR, INR, GBP, and more with automatic real-time rate conversion.</p>
-                <img src="assets/screenshots/ss-05-currency.png" alt="Currency Conversion" class="feature-mockup">
+                <p>Seamlessly hold accounts and log expenses in USD, EUR, INR, GBP, AED, and JPY. Dynamic real-time exchange rates automatically convert all balances into your chosen home currency while keeping the original foreign transaction intact.</p>
+                <img src="assets/screenshots/ss-05-currency.png" alt="Multi-Currency Converter" class="feature-mockup" loading="lazy">
             </div>
             
-            <!-- Feature 2 -->
+            <!-- Feature 2: Visual Analytics & Donut -->
             <div class="feature-card">
                 <div class="feature-icon-wrapper">
                     <i data-lucide="pie-chart" class="feature-icon"></i>
                 </div>
-                <h3>Visual Analytics & Budgets</h3>
-                <p>Gain visual clarity with category charts, monthly trends, spending targets, and intelligent budget overrun warnings.</p>
-                <img src="assets/screenshots/ss-02-analytics.png" alt="Analytics Feature" class="feature-mockup">
+                <h3>Visual Analytics & Donut Breakdown</h3>
+                <p>Gain crystal-clear visual clarity with category expense donut charts, daily spending velocity curves, monthly burn-rates, and intelligent overrun warnings that identify where unmonitored money goes.</p>
+                <img src="assets/screenshots/ss-02-analytics.png" alt="Visual Analytics Donut" class="feature-mockup" loading="lazy">
             </div>
             
-            <!-- Feature 3 -->
+            <!-- Feature 3: Groups & Trip Split -->
             <div class="feature-card">
                 <div class="feature-icon-wrapper">
                     <i data-lucide="users" class="feature-icon"></i>
                 </div>
-                <h3>Group Bill Splitting</h3>
-                <p>Never worry about who owes whom. Split bills with roommates and travel buddies evenly or by custom percentages.</p>
-                <img src="assets/screenshots/ss-03-groups.png" alt="Groups Feature" class="feature-mockup">
+                <h3>Trip Groups & Bill Splitting</h3>
+                <p>Never worry about who owes whom. Create shared groups for road trips, vacations, or roommate rent. Track multi-person payments with an automated minimum-transfer settlement engine and one-tap reconciliation.</p>
+                <img src="assets/screenshots/ss-03-groups.png" alt="Trip Groups and Bill Split" class="feature-mockup" loading="lazy">
             </div>
 
-            <!-- Feature 4 -->
+            <!-- Feature 4: Transactions Ledger & Filtering -->
             <div class="feature-card">
                 <div class="feature-icon-wrapper">
-                    <i data-lucide="zap" class="feature-icon"></i>
+                    <i data-lucide="list-ordered" class="feature-icon"></i>
                 </div>
-                <h3>Fast Logging & Receipts</h3>
-                <p>Record transactions in 3 seconds flat. Attach camera receipts, tag categories, and keep warranty documents organized.</p>
-                <img src="assets/screenshots/ss-06-add-expense.png" alt="Add Expense Feature" class="feature-mockup">
+                <h3>Cash Flow Ledger & Deep Filters</h3>
+                <p>A chronological financial ledger showing monthly net cash flow cards, member attribution, and multi-parameter filters by 4 transaction types, payment sources (Cash, Bank, UPI, Cards), categories, and custom dates.</p>
+                <img src="assets/screenshots/ss-04-transactions.png" alt="Transactions Ledger" class="feature-mockup" loading="lazy">
+            </div>
+
+            <!-- Feature 5: Fast Entry & OCR Receipt Scanner -->
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i data-lucide="camera" class="feature-icon"></i>
+                </div>
+                <h3>4-Way Flow & Apple Vision OCR</h3>
+                <p>Log Income, Expenses, Lent amounts (Get), and Borrowed funds (Will Give) in under 3 seconds flat. Snap paper receipts using on-device Apple Vision OCR that instantly reads totals and attaches image proofs.</p>
+                <img src="assets/screenshots/ss-06-add-expense.png" alt="4-Way Transaction Selector" class="feature-mockup" loading="lazy">
+            </div>
+
+            <!-- Feature 6: Savings Goals & Budgets -->
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i data-lucide="target" class="feature-icon"></i>
+                </div>
+                <h3>Savings Goals & Category Budgets</h3>
+                <p>Set targets for dream vacations, emergency cushions, or luxury purchases with target dates and visual milestone rings. Set monthly category budget limits with proactive 80% threshold alerts to keep spending disciplined.</p>
+                <img src="assets/screenshots/ss-08-savings-goals.png" alt="Savings Goals Tracker" class="feature-mockup" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- 11-Screen Interactive Showcase Carousel Section -->
+    <!-- 12-Screen Interactive Showcase Carousel Section -->
     <section id="screenshots" class="gallery-section">
         <div class="section-header">
             <div class="badge">
-                <i data-lucide="layers" style="width: 15px; height: 15px; color: var(--accent-mint);"></i>
-                <span>Visual App Walkthrough</span>
+                <i data-lucide="smartphone" style="width: 15px; height: 15px; color: var(--accent-mint);"></i>
+                <span>Interactive Retina App Tour</span>
             </div>
             <h2>Explore Every <span class="text-accent">Screen</span></h2>
-            <p>11 beautifully crafted iOS screens designed for clarity, speed, and financial control.</p>
+            <p>12 meticulously designed iOS screens built for speed, elegance, and financial mastery. Tap any screen to inspect full resolution details.</p>
         </div>
 
         <div class="gallery-carousel-wrapper">
@@ -173,7 +258,7 @@
 
             <div class="gallery-track">
                 <!-- Screen 1: Dashboard -->
-                <div class="gallery-card">
+                <div class="gallery-card" data-index="0">
                     <div class="gallery-phone">
                         <img src="assets/screenshots/ss-01-dashboard.png" alt="Dashboard Screen" loading="lazy">
                     </div>
@@ -184,44 +269,44 @@
                     </div>
                 </div>
 
-                <!-- Screen 2: Analytics -->
-                <div class="gallery-card">
-                    <div class="gallery-phone">
-                        <img src="assets/screenshots/ss-02-analytics.png" alt="Analytics Screen" loading="lazy">
-                    </div>
-                    <div class="gallery-info">
-                        <span class="gallery-tag">Charts</span>
-                        <h4>Visual Analytics</h4>
-                        <p>Monthly & yearly charts with visual category breakdowns.</p>
-                    </div>
-                </div>
-
-                <!-- Screen 3: Groups -->
-                <div class="gallery-card">
-                    <div class="gallery-phone">
-                        <img src="assets/screenshots/ss-03-groups.png" alt="Bill Split Groups Screen" loading="lazy">
-                    </div>
-                    <div class="gallery-info">
-                        <span class="gallery-tag">Split Bills</span>
-                        <h4>Group Expenses</h4>
-                        <p>Create groups, split bills, and track who owes whom.</p>
-                    </div>
-                </div>
-
-                <!-- Screen 4: Transactions -->
-                <div class="gallery-card">
+                <!-- Screen 2: Transactions -->
+                <div class="gallery-card" data-index="1">
                     <div class="gallery-phone">
                         <img src="assets/screenshots/ss-04-transactions.png" alt="Transactions List Screen" loading="lazy">
                     </div>
                     <div class="gallery-info">
                         <span class="gallery-tag">History</span>
-                        <h4>Transaction Ledger</h4>
-                        <p>Filter, search tags, and review complete transaction history.</p>
+                        <h4>Cash Flow & Ledger</h4>
+                        <p>Net cash flow card, monthly spend chips & item details.</p>
+                    </div>
+                </div>
+
+                <!-- Screen 3: Analytics -->
+                <div class="gallery-card" data-index="2">
+                    <div class="gallery-phone">
+                        <img src="assets/screenshots/ss-02-analytics.png" alt="Analytics Donut Screen" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-tag">Charts</span>
+                        <h4>Visual Analytics & Donut</h4>
+                        <p>Category expense donut chart & daily velocity trend.</p>
+                    </div>
+                </div>
+
+                <!-- Screen 4: Filter Modal -->
+                <div class="gallery-card" data-index="3">
+                    <div class="gallery-phone">
+                        <img src="assets/screenshots/ss-12-filter.png" alt="Advanced Filter Sheet" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-tag">Search</span>
+                        <h4>Deep Filter Sheet</h4>
+                        <p>Filter by 4 types, payment accounts, tags & date ranges.</p>
                     </div>
                 </div>
 
                 <!-- Screen 5: Currency Converter -->
-                <div class="gallery-card">
+                <div class="gallery-card" data-index="4">
                     <div class="gallery-phone">
                         <img src="assets/screenshots/ss-05-currency.png" alt="Currency Converter Screen" loading="lazy">
                     </div>
@@ -233,43 +318,55 @@
                 </div>
 
                 <!-- Screen 6: Add Transaction -->
-                <div class="gallery-card">
+                <div class="gallery-card" data-index="5">
                     <div class="gallery-phone">
                         <img src="assets/screenshots/ss-06-add-expense.png" alt="Quick Add Transaction Screen" loading="lazy">
                     </div>
                     <div class="gallery-info">
                         <span class="gallery-tag">Fast Entry</span>
-                        <h4>Quick Add Screen</h4>
-                        <p>Log income or expense with category presets in under 3 seconds.</p>
+                        <h4>4-Way Quick Add</h4>
+                        <p>Income, Expense, Get, and Will Give in under 3 seconds.</p>
                     </div>
                 </div>
 
-                <!-- Screen 7: Categories -->
-                <div class="gallery-card">
+                <!-- Screen 7: OCR & Metadata -->
+                <div class="gallery-card" data-index="6">
                     <div class="gallery-phone">
-                        <img src="assets/screenshots/ss-07-categories.png" alt="Categories Screen" loading="lazy">
+                        <img src="assets/screenshots/ss-07-categories.png" alt="Receipt Scanner Screen" loading="lazy">
                     </div>
                     <div class="gallery-info">
-                        <span class="gallery-tag">Categories</span>
-                        <h4>Smart Tagging</h4>
-                        <p>Fuel, Groceries, Dining, and customizable personal categories.</p>
+                        <span class="gallery-tag">Vision OCR</span>
+                        <h4>Receipts & Accounts</h4>
+                        <p>Vision OCR scanning, tags, payment sources & recurring bills.</p>
                     </div>
                 </div>
 
-                <!-- Screen 8: Savings Goals -->
-                <div class="gallery-card">
+                <!-- Screen 8: Groups -->
+                <div class="gallery-card" data-index="7">
+                    <div class="gallery-phone">
+                        <img src="assets/screenshots/ss-03-groups.png" alt="Bill Split Groups Screen" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-tag">Split Bills</span>
+                        <h4>Trip Groups & Split</h4>
+                        <p>Create groups, split bills, and track who owes whom.</p>
+                    </div>
+                </div>
+
+                <!-- Screen 9: Savings Goals -->
+                <div class="gallery-card" data-index="8">
                     <div class="gallery-phone">
                         <img src="assets/screenshots/ss-08-savings-goals.png" alt="Savings Goals Screen" loading="lazy">
                     </div>
                     <div class="gallery-info">
                         <span class="gallery-tag">Goals</span>
-                        <h4>Savings Tracker</h4>
+                        <h4>Savings Goals</h4>
                         <p>Track targets for vacations, emergency funds & dream purchases.</p>
                     </div>
                 </div>
 
-                <!-- Screen 9: More Hub -->
-                <div class="gallery-card">
+                <!-- Screen 10: More Hub -->
+                <div class="gallery-card" data-index="9">
                     <div class="gallery-phone">
                         <img src="assets/screenshots/ss-09-more-hub.png" alt="Tools & Hub Screen" loading="lazy">
                     </div>
@@ -280,20 +377,20 @@
                     </div>
                 </div>
 
-                <!-- Screen 10: Profile & Security -->
-                <div class="gallery-card">
+                <!-- Screen 11: Profile & Security -->
+                <div class="gallery-card" data-index="10">
                     <div class="gallery-phone">
                         <img src="assets/screenshots/ss-09-profile.png" alt="Profile Screen" loading="lazy">
                     </div>
                     <div class="gallery-info">
                         <span class="gallery-tag">Security</span>
                         <h4>Profile & Biometrics</h4>
-                        <p>Face ID / Touch ID lock, secure account management.</p>
+                        <p>Face ID / Touch ID lock, dark themes, and CSV export.</p>
                     </div>
                 </div>
 
-                <!-- Screen 11: Launch Splash -->
-                <div class="gallery-card">
+                <!-- Screen 12: Launch Splash -->
+                <div class="gallery-card" data-index="11">
                     <div class="gallery-phone">
                         <img src="assets/screenshots/ss-11-launch.png" alt="Launch Screen" loading="lazy">
                     </div>
@@ -307,105 +404,103 @@
         </div>
     </section>
 
-    <!-- Download Section -->
+    <!-- Architecture & Security Section -->
+    <section id="security" class="features" style="padding-top: 40px; padding-bottom: 70px;">
+        <div class="section-header">
+            <div class="badge">
+                <i data-lucide="shield-check" style="width: 15px; height: 15px; color: var(--accent-mint);"></i>
+                <span>Privacy & Engineering Standard</span>
+            </div>
+            <h2>Built on Uncompromising <span class="text-accent">Privacy</span></h2>
+            <p>Your money is strictly your personal business. TrackExpense is engineered without third-party ad brokers.</p>
+        </div>
+
+        <div class="why-us-grid">
+            <div class="why-us-card">
+                <div class="why-us-icon"><i data-lucide="wifi-off"></i></div>
+                <h4>100% Offline-First</h4>
+                <p>Every expense, budget edit, and trip split writes instantly to device storage. Syncs silently to encrypted cloud only when online.</p>
+            </div>
+            <div class="why-us-card">
+                <div class="why-us-icon"><i data-lucide="fingerprint"></i></div>
+                <h4>Face ID & Touch ID</h4>
+                <p>Enable native iOS biometric app lock so only you can view your transactions, account balances, and net worth ledger.</p>
+            </div>
+            <div class="why-us-card">
+                <div class="why-us-icon"><i data-lucide="file-spreadsheet"></i></div>
+                <h4>PDF & CSV Statements</h4>
+                <p>Generate executive PDF financial reports with category charts or export clean CSV spreadsheets for Excel, Google Sheets, and Numbers.</p>
+            </div>
+            <div class="why-us-card">
+                <div class="why-us-icon"><i data-lucide="trash-2"></i></div>
+                <h4>Instant Data Purge</h4>
+                <p>Full Apple App Store compliance. One-tap permanent data and account deletion instantly wipes every cloud record without delay.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA Section -->
     <section id="download" class="cta-section">
         <div class="cta-card glassmorphic">
-            <h2>Ready to Take Control of Your Money?</h2>
-            <p>Join smart spenders building healthy financial habits. Download TrackExpense on your iPhone today.</p>
+            <h2>Ready to Master Your Finances?</h2>
+            <p>Join smart spenders building healthy financial habits. Download TrackExpense on your iPhone today and transform the way you budget.</p>
             <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="btn-primary large">
                 <i data-lucide="apple"></i>
                 Download on the App Store
             </a>
-        </div>
-    </section>
-
-    <!-- Privacy Policy Section -->
-    <section id="policy" class="features" style="padding-top: 60px; padding-bottom: 60px;">
-        <div class="section-header">
-            <h2>Privacy <span class="text-accent">Policy</span></h2>
-            <p>Your financial records are strictly yours. We built TrackExpense with privacy at its very core.</p>
-        </div>
-        <div class="feature-card glassmorphic" style="max-width: 900px; margin: 0 auto;">
-            <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem;">
-                <div class="feature-icon-wrapper" style="margin-bottom: 0;">
-                    <i data-lucide="shield-check" class="feature-icon"></i>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 0.25rem;">100% Private & Biometrically Secured</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 0;">Apple App Store Compliant</p>
-                </div>
-            </div>
-            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                At <strong>TrackExpense</strong>, we never sell, monetize, or track your personal finances across apps or websites. All logs are encrypted, protected by optional Face ID / Touch ID biometric authentication, and you have complete control to export or permanently erase your data anytime.
-            </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="privacy.html" class="btn-secondary">
-                    <i data-lucide="file-text"></i>
-                    Read Full Privacy Policy &rarr;
-                </a>
+            <div style="margin-top: 1.5rem; font-size: 0.88rem; color: var(--text-muted);">
+                Compatible with iPhone running iOS 17.0 or later • Free with optional premium features
             </div>
         </div>
     </section>
 
-    <!-- Terms of Policy Section -->
-    <section id="terms" class="features" style="padding-top: 40px; padding-bottom: 60px;">
-        <div class="section-header">
-            <h2>Terms of <span class="text-accent">Policy</span></h2>
-            <p>Clear, transparent terms regarding app licensing, purchases, and responsible use.</p>
-        </div>
-        <div class="feature-card glassmorphic" style="max-width: 900px; margin: 0 auto;">
-            <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem;">
-                <div class="feature-icon-wrapper" style="margin-bottom: 0;">
-                    <i data-lucide="scale" class="feature-icon"></i>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 0.25rem;">Terms of Service & Licensing</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 0;">Updated October 2026</p>
-                </div>
-            </div>
-            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                By using TrackExpense, you receive a personal license for tracking and budgeting on iOS devices. In-app features and subscriptions are managed securely via your Apple ID. TrackExpense is an expense tracking tool and does not constitute formal tax or investment advice.
-            </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="terms.html" class="btn-secondary">
-                    <i data-lucide="book-open"></i>
-                    Read Full Terms of Service &rarr;
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support Section -->
+    <!-- Support & Comprehensive FAQ Section -->
     <section id="support" class="features" style="padding-top: 40px; padding-bottom: 90px;">
         <div class="section-header">
             <h2>Support & <span class="text-accent">Help Center</span></h2>
-            <p>Have questions, need help, or want to suggest a new feature? We are always here for you.</p>
+            <p>Got questions about features, currency rates, or bill splitting? We are here for you.</p>
         </div>
         <div style="max-width: 900px; margin: 0 auto;">
             <div class="faq-item">
-                <h3>How do I log a transaction quickly?</h3>
-                <p>Tap the <strong>+</strong> button at the bottom navigation. Enter your amount, select a category, add optional notes or receipt photos, and tap Save. It takes under 3 seconds!</p>
+                <h3>How do I log a transaction? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+                <p>Tap the floating <strong>+</strong> button on the Dashboard or Transactions screen. Choose your transaction type: <strong>Income</strong> (money received), <strong>Expense</strong> (money spent), <strong>Get</strong> (money lent to someone to be repaid), or <strong>Will Give</strong> (money you borrowed that you owe). Enter the amount, choose a category, pick a payment method, and tap Save Transaction in under 3 seconds.</p>
             </div>
             <div class="faq-item">
-                <h3>Can I split bills with multiple friends?</h3>
-                <p>Yes! Under the <strong>Groups</strong> tab, create a trip or roommate group, log shared expenses, and TrackExpense will compute the exact balances so you know who owes whom.</p>
+                <h3>How does multi-currency conversion work? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+                <p>TrackExpense supports real-time multi-currency conversions across USD, EUR, INR, GBP, AED, JPY, and more. When you choose your Default Currency in Profile, all balances, charts, and transaction lists automatically convert to that currency while keeping original foreign amounts intact.</p>
             </div>
             <div class="faq-item">
-                <h3>How does multi-currency conversion work?</h3>
-                <p>TrackExpense fetches live exchange rates so you can record expenses while traveling abroad and view your unified net balance converted to your home currency.</p>
+                <h3>Does TrackExpense work completely offline? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+                <p>Yes! TrackExpense is designed offline-first. Every transaction, budget update, and trip split is saved to your device immediately without needing internet. Whenever you connect, local entries synchronize securely with your cloud storage in the background.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How does Bill Split & Trip Group settlement work? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+                <p>Under the Groups tab, create a group (e.g., 'Goa Trip 🏖️', 'Apartment Rent 🏠') and add members. Log shared bills and specify who paid. TrackExpense computes the smart minimum-transfer settlement matrix so everyone knows exactly who owes whom, and you can record settlements with a single tap.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I scan bills and paper receipts automatically? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+                <p>Yes! When adding a transaction, tap 'Attach receipt photo' to capture or select a photo. TrackExpense's on-device Apple Vision OCR automatically analyzes the image, detects the total amount, and pre-fills it for you.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I export PDF financial reports or CSV files? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+                <p>Go to the Report tab to generate an executive PDF statement with clean tables and category summaries for any monthly, yearly, or custom range. You can also export a complete CSV file from Profile for Excel, Google Sheets, or Apple Numbers.</p>
             </div>
 
             <div class="contact-box glassmorphic">
                 <h3>Need Direct Assistance?</h3>
                 <p>Reach out to our developer support team directly. We typically reply within 24 hours.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="mailto:ruchitaramani.ios@gmail.com" class="btn-primary large">
+                    <a href="mailto:support@trackexpense.app" class="btn-primary large">
                         <i data-lucide="mail"></i>
-                        Email: ruchitaramani.ios@gmail.com
+                        support@trackexpense.app
+                    </a>
+                    <a href="mailto:ruchitaramani.ios@gmail.com" class="btn-secondary" style="padding: 1.15rem 2rem;">
+                        <i data-lucide="send"></i>
+                        ruchitaramani.ios@gmail.com
                     </a>
                     <a href="support.html" class="btn-secondary" style="padding: 1.15rem 2rem;">
                         <i data-lucide="help-circle"></i>
-                        Full Support & FAQ Page
+                        Full Support & FAQ Page &rarr;
                     </a>
                 </div>
             </div>
@@ -420,49 +515,54 @@
                     <img src="assets/logo.png" alt="TrackExpense Logo" class="logo-img">
                     <span>TrackExpense</span>
                 </div>
-                <p>Your private, all-in-one personal finance and group expense companion.</p>
+                <p>Your private, all-in-one personal finance, budget tracking, and group expense companion for iOS.</p>
             </div>
             <div class="footer-links">
                 <div class="link-column">
                     <h4>Legal & Policy</h4>
                     <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Policy</a>
+                    <a href="terms.html">Terms of Service</a>
                 </div>
                 <div class="link-column">
-                    <h4>Support</h4>
+                    <h4>Support & Contact</h4>
                     <a href="support.html">Support Center & FAQ</a>
-                    <a href="mailto:ruchitaramani.ios@gmail.com">Email Developer</a>
+                    <a href="mailto:support@trackexpense.app">Email Support Team</a>
+                    <a href="mailto:ruchitaramani.ios@gmail.com">Developer Contact</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 TrackExpense. All rights reserved.</p>
+            <p>&copy; 2026 TrackExpense. Designed by Shubham Ramani. All rights reserved.</p>
         </div>
     </footer>
     </div><!-- /.site-wrapper -->
 
-    <!-- Tour Countdown Overlay -->
-    <div id="tourCountdown" class="tour-countdown">
-        <div class="countdown-number" id="countdownNumber">3</div>
-        <div class="countdown-label">Get ready to record your mobile screen...</div>
-    </div>
-
-    <!-- Active Tour Status Banner -->
-    <div id="tourBanner" class="tour-banner">
-        <div class="tour-recording-dot"></div>
-        <span id="tourStatusText">🎬 Tour in Progress: Hero Section</span>
-    </div>
-
-    <!-- Floating Recording Toolbar -->
-    <div class="tour-toolbar">
-        <button id="toggleMobileBtn" class="tour-btn secondary" title="Toggle Mobile Phone View">
-            <i data-lucide="smartphone"></i>
-            <span id="mobileBtnText">Mobile View</span>
-        </button>
-        <button id="startTourBtn" class="tour-btn" title="Start Automated Walkthrough for Recording">
-            <i data-lucide="play-circle"></i>
-            <span>Start Tour for Recording</span>
-        </button>
+    <!-- Interactive Screenshot Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <div class="lightbox-container">
+            <button id="lightboxCloseBtn" class="lightbox-close-btn" aria-label="Close Preview">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="lightbox-phone-frame">
+                <img id="lightboxImg" src="assets/screenshots/ss-01-dashboard.png" alt="Screenshot Full View">
+            </div>
+            <div class="lightbox-details">
+                <span id="lightboxTag" class="lightbox-tag">Overview</span>
+                <h3 id="lightboxTitle" class="lightbox-title">Net Balance & Smart Insights</h3>
+                <p id="lightboxDesc" class="lightbox-desc">Overview details description</p>
+                <ul id="lightboxBullets" class="lightbox-bullets">
+                    <!-- Dynamic bullet items -->
+                </ul>
+                <div class="lightbox-nav-row">
+                    <button id="lightboxPrevBtn" class="lightbox-nav-btn">
+                        <i data-lucide="chevron-left"></i> Previous
+                    </button>
+                    <button id="lightboxNextBtn" class="lightbox-nav-btn">
+                        Next <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>

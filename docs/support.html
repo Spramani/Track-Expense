@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support & FAQ - TrackExpense</title>
-    <meta name="description" content="Support and Frequently Asked Questions for the TrackExpense iOS app.">
+    <title>Support & Help Center — TrackExpense</title>
+    <meta name="description" content="Support and Frequently Asked Questions for the TrackExpense iOS application. Get answers to multi-currency tracking, group bill splitting, Apple Vision OCR, and data privacy.">
     <link rel="icon" type="image/png" href="assets/logo.png">
     
     <!-- Google Fonts -->
@@ -35,7 +35,9 @@
             </a>
             <div class="nav-links">
                 <a href="index.html#features">Features</a>
-                <a href="privacy.html">Privacy Policy</a>
+                <a href="index.html#showcase">3D Preview</a>
+                <a href="index.html#screenshots">Screens</a>
+                <a href="privacy.html">Privacy</a>
                 <a href="terms.html">Terms</a>
                 <a href="support.html" style="color: var(--accent-mint);">Support</a>
                 <a href="index.html#download" class="btn-primary-small">Get the App</a>
@@ -45,47 +47,85 @@
 
     <!-- Main Content -->
     <div class="legal-content">
-        <h1>Support & <span class="text-accent">FAQ</span></h1>
-        <p class="subtitle">Find answers to common questions or reach out directly to our team.</p>
+        <h1>Help & <span class="text-accent">Support Center</span></h1>
+        <p class="subtitle">Find answers to frequently asked questions or get in touch directly with the developer team.</p>
 
         <div class="faq-item">
-            <h3>How do I log a new transaction?</h3>
-            <p>Tap the <strong>+</strong> button in the bottom navigation bar. Enter the transaction amount, select an expense category (or income), add an optional merchant note or receipt photo, and tap Save. It logs in under 3 seconds!</p>
+            <h3>How do I log a transaction? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>Tap the floating <strong>+</strong> button on the Dashboard or Transactions screen. Choose your transaction type:
+            <br>• <strong>Income:</strong> Money received (salary, dividends, freelance, gifts)
+            <br>• <strong>Expense:</strong> Money spent (groceries, dining, travel, shopping)
+            <br>• <strong>Get (Receivable):</strong> Money lent to someone to be repaid back to you
+            <br>• <strong>Will Give (Payable):</strong> Money you borrowed that you owe to someone
+            <br><br>Enter the amount, choose a category, pick a payment method (Cash, Bank/UPI, Credit Card), and tap <strong>Save Transaction</strong>. It records in under 3 seconds!</p>
         </div>
 
         <div class="faq-item">
-            <h3>How does multi-currency tracking work?</h3>
-            <p>TrackExpense allows you to record expenses in multiple global currencies (USD, EUR, INR, GBP, JPY, and more). The app automatically converts your transactions into your primary base currency using live exchange rates, giving you a crystal-clear unified net worth.</p>
+            <h3>How does multi-currency conversion work? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>TrackExpense supports automatic real-time and local multi-currency conversions across USD ($), EUR (€), INR (₹), GBP (£), AED (د.إ), JPY (¥), CAD, AUD, and more.
+            <br><br>In your Profile, select your <strong>Default Currency</strong>. Your Net Balance, Total Income, and Total Expense dynamically convert to this home currency. When traveling, transactions keep their original currency intact, and detail pages display both your converted amount and original amount side-by-side.</p>
         </div>
 
         <div class="faq-item">
-            <h3>How does group bill splitting work?</h3>
-            <p>Navigate to the <strong>Groups</strong> tab to create a group for roommates, trips, or dining. Add expenses and choose whether to split equally or by percentage. TrackExpense automatically calculates who owes whom and lets you record settlements seamlessly.</p>
+            <h3>Does TrackExpense work completely offline? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>Yes! TrackExpense is built offline-first. Every transaction, budget limit, and trip split is saved to your iPhone instantly without requiring an active internet connection. As soon as your device reconnects, all local entries seamlessly synchronize with your secure cloud storage in the background.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Is my financial data secure and private?</h3>
-            <p>Yes, 100%. We believe financial privacy is sacred. We never sell or share your records with third-party advertisers. You can also enable Face ID / Touch ID biometric lock in Settings to prevent unauthorized access.</p>
+            <h3>How do I create and manage budgets? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>Go to the <strong>Budget</strong> section and tap <strong>Set Budget</strong>. Select a category (Food & Dining, Travel, Shopping, Bills), enter your spending limit, and pick Monthly or a Custom Date range.
+            <br><br>TrackExpense alerts you as you approach 80% and when you exceed your limit. You can also view unbudgeted spending to identify where unmonitored money goes.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Can I attach photos and receipts to transactions?</h3>
-            <p>Yes. While adding or editing an expense, tap the camera or photo gallery icon to capture or upload a paper receipt. Receipts are stored securely with your transaction for easy tax and warranty lookups.</p>
+            <h3>How does Bill Split & Trip Group settlement work? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>Navigate to <strong>Bill Split</strong> or <strong>Trip Groups</strong> to split shared expenses with friends or roommates:
+            <br>1. Create a trip or shared group (e.g., <em>Goa Trip 🏖️</em>, <em>Apartment Rent 🏠</em>) and add members.
+            <br>2. Log shared expenses and specify who paid and how the cost is divided (equally or custom).
+            <br>3. TrackExpense automatically computes the smart minimum-transfer settlement matrix so everyone knows exactly who owes whom, and you can record settlements with a single tap.</p>
         </div>
 
         <div class="faq-item">
-            <h3>How do I delete my account or reset my data?</h3>
-            <p>Go to <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; <strong>Delete Account & Data</strong>. Confirming this action will immediately and irreversibly erase all your records, budgets, and group associations.</p>
+            <h3>Can I scan bills and receipts automatically? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>Yes! When adding a transaction, tap <strong>Attach receipt photo</strong> to capture or select a photo from your library. TrackExpense's on-device Apple Vision OCR automatically analyzes the image, detects the total amount, and pre-fills it for you while saving the receipt image for tax and warranty reference.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I export PDF financial reports or CSV files? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>TrackExpense provides two flexible export formats:
+            <br>• <strong>PDF Reports:</strong> Go to the Report section, select your timeframe (Monthly, Yearly, or Custom Range), and generate an executive PDF statement with clean tables and visual category breakdowns.
+            <br>• <strong>CSV Export:</strong> In Profile, tap <strong>Export Transactions (CSV)</strong> to generate a spreadsheet file compatible with Microsoft Excel, Apple Numbers, and Google Sheets.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I manage banks, cards, and payment sources? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>Go to <strong>Profile &rarr; Payment Sources</strong>. You can configure Bank Accounts, UPI IDs, Cash Wallets, and Credit Cards. Each transaction can be tagged with its payment method to track spending across different accounts.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I protect my app with Face ID or Touch ID? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>In the Profile screen under <strong>Security & Privacy</strong>, toggle <strong>Face ID / Touch ID</strong>. When enabled, TrackExpense requires biometric verification whenever you open the app or return from the background, keeping your finances completely confidential.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I delete my account and data? <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></h3>
+            <p>In compliance with Apple App Store guidelines, you have total ownership of your data. Scroll to the bottom of the Profile screen and tap <strong>Delete Account & Data</strong>. Confirming will permanently and irreversibly erase all your records, receipt photos, budgets, and cloud account credentials.</p>
         </div>
 
         <!-- Contact Box -->
         <div class="contact-box glassmorphic">
-            <h3>Need More Help?</h3>
-            <p>Have an issue, feature request, or feedback? We are here to help you get the most out of TrackExpense.</p>
-            <a href="mailto:ruchitaramani.ios@gmail.com" class="btn-primary large">
-                <i data-lucide="mail"></i>
-                Email: ruchitaramani.ios@gmail.com
-            </a>
+            <h3>Need Personalized Help?</h3>
+            <p>Have an issue, feature request, or feedback? Our developer support team is ready to assist you. We typically respond within 24 hours.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="mailto:support@trackexpense.app" class="btn-primary large">
+                    <i data-lucide="mail"></i>
+                    support@trackexpense.app
+                </a>
+                <a href="mailto:ruchitaramani.ios@gmail.com" class="btn-secondary" style="padding: 1.15rem 2rem;">
+                    <i data-lucide="send"></i>
+                    ruchitaramani.ios@gmail.com
+                </a>
+            </div>
         </div>
     </div>
 
@@ -97,23 +137,24 @@
                     <img src="assets/logo.png" alt="TrackExpense Logo" class="logo-img">
                     <span>TrackExpense</span>
                 </div>
-                <p>Your private, all-in-one personal finance and group expense companion.</p>
+                <p>Your private, all-in-one personal finance, budget tracking, and group expense companion for iOS.</p>
             </div>
             <div class="footer-links">
                 <div class="link-column">
                     <h4>Legal & Policy</h4>
                     <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Policy</a>
+                    <a href="terms.html">Terms of Service</a>
                 </div>
                 <div class="link-column">
-                    <h4>Support</h4>
+                    <h4>Support & Contact</h4>
                     <a href="support.html">Support Center & FAQ</a>
-                    <a href="mailto:ruchitaramani.ios@gmail.com">Email Us</a>
+                    <a href="mailto:support@trackexpense.app">Email Support Team</a>
+                    <a href="mailto:ruchitaramani.ios@gmail.com">Developer Contact</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 TrackExpense. All rights reserved.</p>
+            <p>&copy; 2026 TrackExpense. Designed by Shubham Ramani. All rights reserved.</p>
         </div>
     </footer>
 
